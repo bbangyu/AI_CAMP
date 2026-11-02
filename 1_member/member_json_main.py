@@ -1,4 +1,4 @@
-from member_service import (
+from member.member_service import (
     load_members,
     register_member,
     save_members

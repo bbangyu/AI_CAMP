@@ -1,0 +1,26 @@
+[
+    {
+        "member_id": "pcwk01",
+        "name": "이상무",
+        "email": "jamesol@naver.com",
+        "reg_date": "2026-10-25 16:00:00",
+        "role": "USER",
+        "password": "a123456789"
+    },
+    {
+        "member_id": "pcwk02",
+        "name": "이순희",
+        "email": "sunhee@naver.com",
+        "reg_date": "2026-10-25 16:05:00",
+        "role": "USER",
+        "password": "a123456789"
+    },
+    {
+        "member_id": "pcwk03",
+        "name": "이상무03U",
+        "email": "jamesol03@naver.com",
+        "reg_date": "2026/10/28 10:40:40",
+        "role": "USER",
+        "password": "a123456789U"
+    }
+]
