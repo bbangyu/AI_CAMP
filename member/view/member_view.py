@@ -14,15 +14,38 @@ Validation
     - 공백 입력 검사
     - Member 객체 생성시 유효성 검사
  """
+
+from common.log_config import setup_logging
 from member.model.member import Member
 from member.dao.member_dao import MemberDao
 from member.service.member_service import MemberSevice
 from member.controller.member_controller import MemberController
+import logging
 
+setup_logging()
+
+logger = logging.getLogger(__name__)
 
 class MemberView:
     def __init__(self, controller: MemberSevice) -> None:
         self.controller = controller
+
+        # 단건 조회
+    def input_select_one(self) -> None:
+        """
+        회원 단건 조회 화면
+        """
+        print("[회원 단건 조회]")
+
+        member_id = self.input_required("조회할 회원 ID")
+
+        member = self.controller.do_select_one(member_id)
+
+        if member is not None:
+            #print(member)
+            logger.debug("member:%s",member)
+        else:
+            print("회원을 찾을 수 없습니다.")   
 
     # 메뉴
     def show_menu(self) -> None:

@@ -7,6 +7,9 @@ from pathlib import Path
 from member.model.member import Member
 from common.base_dto import BaseDTO
 from common.dao_interface import DaoInterface
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class MemberDao(DaoInterface):
@@ -29,6 +32,19 @@ class MemberDao(DaoInterface):
 
         # JSON 파일에서 회원정보 읽기
         self.load_json()
+
+    def do_select_one(self, dto_id: str) -> Member:
+        """회원 아이디로 단건조회"""
+        logger.debug(
+            "회원 조회 시작: %s",
+            dto_id
+        )
+        for member in self.members:
+            if member.member_id == dto_id:
+                return member
+
+        return None 
+    
 
     def do_update(self, dto: BaseDTO) -> int:
         """회원 정보를 수정 합니다."""

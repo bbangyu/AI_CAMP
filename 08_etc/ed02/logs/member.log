@@ -1,0 +1,14 @@
+2026-11-04 15:11:43,061 [DEBUG] member_app do_save : 33 - do_save() 시작
+2026-11-04 15:11:43,061 [INFO] member_app do_save : 35 - 회원 저장: pcwk01
+2026-11-04 15:11:43,061 [DEBUG] member_app do_save : 37 - do_save() 종료
+2026-11-04 15:27:27,732 [DEBUG] member_app do_save : 33 - do_save() 시작
+2026-11-04 15:27:27,732 [INFO] member_app do_save : 35 - 회원 저장: pcwk01
+2026-11-04 15:27:27,733 [DEBUG] member_app do_save : 37 - do_save() 종료
+2026-11-04 15:40:47,905 [ERROR] member_app <module> : 35 - 계산오류: division by zero
+2026-11-04 15:43:37,838 [ERROR] member_app <module> : 35 - 계산중 예외 발생
+2026-11-04 15:43:59,749 [ERROR] member_app <module> : 35 - 계산중 예외 발생
+Traceback (most recent call last):
+  File "C:\AI_CAMP_20260921\01_PYTHON\WORKSPACE\08_etc\ed02\p08_console_file_exception_run.py", line 32, in <module>
+    result = 10/0
+             ~~^~
+ZeroDivisionError: division by zero
